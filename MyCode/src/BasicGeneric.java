@@ -9,7 +9,7 @@ public class BasicGeneric {
 
 
         //
-        System.out.println("Done! *********************************************** ");
+        System.out.println("Done! ***************************** ");
     }
 
 
