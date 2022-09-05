@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 public class StudyStream {
 	public static void main(String args[]){
 
-		System.out.println("map方法");
+		System.out.println("Java 8 之前的m ap方法");
 		// java 8之前
 		List<Integer> numList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
 		List<String> strList = new ArrayList<>();
@@ -24,7 +24,12 @@ public class StudyStream {
 			strList.add(Integer.toString(num) + '!');
 		}
 		System.out.println(strList);
+
+
 		// java 8
+		System.out.println("Java 8 通过stream的 map方法");
+		System.out.println("在对象List上调用方法 stream() 返回一个常规对象Stream， 然后用.map()函数进行处理， .collect()函数生成返回值集合");
+		//      在对象list上调用方法 stream() 返回一个常规对象Stream
 		List<String> strListinJava8 = numList.stream()
 				.map(it -> Integer.toString(it) + '!')
 				.map(it -> it + "ok")
@@ -32,7 +37,6 @@ public class StudyStream {
 		System.out.println(strListinJava8);
 
 		List<String> stringList = Arrays.asList("test1|in","test2|in","test3|in","test5|out", "test4|out" );
-		//      在对象list上调用方法 stream() 返回一个常规对象Stream。
 		List<String> outList = stringList.stream()
 				.map(str -> str.split("\\|"))
 				.map(it -> it[0])
@@ -80,6 +84,7 @@ public class StudyStream {
 
 
 		// 找到名字最长的 输出长度
+		System.out.println("找到名字最长的 输出长度");
 		final OptionalInt max = users.stream()
 				.map(rec -> rec.getName())
 				.filter(Objects::nonNull)   // 过滤null
