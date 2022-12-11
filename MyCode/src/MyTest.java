@@ -20,5 +20,7 @@ public class MyTest
 
 		//
 		System.out.println("Done! *********************************************** ");
+
+		System.out.println("Test from Mac monterey! *********************************************** ");
 	}
 }
