@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 public class StudyStream {
 	public static void main(String args[]){
 
-		System.out.println("Java 8 之前的m ap方法");
+		System.out.println("Java 8 之前的map方法");
 		// java 8之前
 		List<Integer> numList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
 		List<String> strList = new ArrayList<>();

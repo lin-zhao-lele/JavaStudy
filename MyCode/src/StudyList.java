@@ -31,8 +31,6 @@ public class StudyList
 		System.out.println("exampleCollection");
 		System.out.println(exampleCollection);
 
-
-
 		// 判断一个string[] 是否包含某个string, 转化成List 再调用contains函数
 		String[] xx = new String[] { "test", "test2" };
 		boolean contain = Arrays.asList(xx).contains("test");

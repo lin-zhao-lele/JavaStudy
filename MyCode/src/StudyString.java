@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -28,7 +29,17 @@ public class StudyString
 		final long testCount = Arrays.stream(testArray).filter(it -> it.contains("test")).count();
 
 		final boolean testExist = Arrays.stream(testArray).filter(it -> it.contains("test")).findAny().isPresent();
-		// 
+
+		// 将string 变成 map
+		String str = "All0:0,All1:1,All2:2";
+		Map<String, String> headerMap = Arrays.stream(str.split(","))
+				.collect(Collectors.toMap(s->s,s->s));
+
+		Map<String, String> headerMap2 = Arrays.stream(str.split(","))
+				.map(it -> it.split(":"))
+				.collect(Collectors.toMap(s->s[0],s->s[1]));
+
+
 		System.out.println("Done! *********************************************** ");
 	}
 
