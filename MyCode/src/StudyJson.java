@@ -16,6 +16,8 @@ public class StudyJson {
         ObjectMapper objectMapper = new ObjectMapper();
         String requestBodyJson = objectMapper.writeValueAsString(requestBody);
 
+
+
         System.out.println(requestBodyJson);
     }
 
