@@ -42,6 +42,12 @@ public class StudyString {
 		String strp =findPattern("sdw sdawd <xx> 23 sd3 sd3 sd3 </xx> sdwa dwd asdwd ", "xx");
 		System.out.println("Find pattern :" + strp);
 
+        // 提取子串 "id == '122431250082513672'"
+        String filter = "id == '122431250082513672'";
+        String id  = filter.split("'")[1];
+        System.out.println(id);
+
+
 
         System.out.println("Done! *********************************************** ");
     }
